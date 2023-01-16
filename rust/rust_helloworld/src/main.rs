@@ -10,7 +10,7 @@ fn main() {
         io::stdin().read_line(&mut guess).expect("Line read failed");
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
-            Err(_) => continue,
+            Err(_) => {println!("Naughty naughty! That's not valid. Numbers only please.");continue},
         };
         println!("Your guess: {guess}");
 
